@@ -26,3 +26,9 @@ INSERT INTO pessoa (nome, logradouro, numero, complemento, bairro, cep, cidade, 
 '45000000', 'VCA', 'Bahia', true);
 INSERT INTO pessoa (nome, logradouro, numero, complemento, bairro, cep, cidade, estado, ativo) values ('Almeida', 'Rua A', '555', null , 'B Qualquer', 
 '45000000', 'VCA', 'Bahia', true);
+INSERT INTO pessoa (nome, logradouro, numero, complemento, bairro, cep, cidade, estado, ativo) values ('Danilo', 'Rua j', '5', null , 'B Qualquer', 
+'45000000', 'VCA', 'Bahia', true);
+INSERT INTO pessoa (nome, logradouro, numero, complemento, bairro, cep, cidade, estado, ativo) values ('Luiz', 'Rua h', '111', null , 'B Qualquer', 
+'45000000', 'VCA', 'Bahia', true);
+INSERT INTO pessoa (nome, logradouro, numero, complemento, bairro, cep, cidade, estado, ativo) values ('Daniella', 'Rua t', '888', null , 'B Qualquer', 
+'45000000', 'VCA', 'Bahia', true);
