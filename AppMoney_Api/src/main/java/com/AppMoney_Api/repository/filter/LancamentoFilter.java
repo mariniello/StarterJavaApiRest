@@ -4,6 +4,11 @@ import java.time.LocalDate;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+
+
+// irá receber todos os paramentros para os quais vou enviar restrições 
+// a data precisa ser tratada individualmente 
+
 public class LancamentoFilter {
 
 	private String descricao;
