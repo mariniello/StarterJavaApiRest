@@ -25,6 +25,7 @@ import com.AppMoney_Api.ExceptionHandler.ExceptionHandler_Api.Erro;
 import com.AppMoney_Api.event.RecursoCriadoEvent;
 import com.AppMoney_Api.model.Lancamento;
 import com.AppMoney_Api.repository.LancamentoRepository;
+import com.AppMoney_Api.repository.filter.LancamentoFilter;
 import com.AppMoney_Api.service.LancamentoService;
 import com.AppMoney_Api.service.exception.PessoaInexistenteOuInativaException;
 
@@ -45,9 +46,9 @@ public class LancamentoResouce {
 	private MessageSource messageSource;
 
 	@GetMapping
-	public List<Lancamento> listar() {
+	public List<Lancamento> pesquisar(LancamentoFilter lancamentoFilter) {
 
-		return lancamentoRepository.findAll();
+		return lancamentoRepository.filtrar(lancamentoFilter);
 	}
 
 	@GetMapping("/{codigo}")
