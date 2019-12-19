@@ -25,7 +25,7 @@ import com.AppMoney_Api.repository.filter.LancamentoFilter;
 public class LancamentoRepositoryImpl implements LancamentoRepositoryQuery {
 
 	@PersistenceContext
-	private EntityManager manager; // gerenciamento para poder trabalhar com a consulta
+	private EntityManager manager; 							// gerenciamento para poder trabalhar com a consulta
 
 	@Override
 	public Page<Lancamento> filtrar(LancamentoFilter lancamentoFilter, Pageable pageable) {
@@ -102,7 +102,7 @@ public class LancamentoRepositoryImpl implements LancamentoRepositoryQuery {
 		Predicate[] predicates = criarRestricoes(lancamentoFilter, builder, root);
 		criteria.where(predicates);
 
-		criteria.select(builder.count(root));     //Conta quantos registro existem dentro da origem(root)
+		criteria.select(builder.count(root));     //Conta quantos registro existem dentro do predicate contendo o resultado das restrições 
 
 		return manager.createQuery(criteria).getSingleResult();  //retorna a quantidade de registros
 	}
